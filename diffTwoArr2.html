@@ -1,0 +1,25 @@
+
+<html>
+
+<script>
+
+function diff(arr1, arr2) {
+	var newArr = arr1.concat(arr2);
+	var return_arr = [];
+	for (var i = 0; i<newArr.length; i++){
+		if (newArr.indexOf(newArr[i]) === newArr.lastIndexOf(newArr[i])) {
+			return_arr.push(newArr[i]);
+		}
+	
+	}
+	
+  return return_arr
+}
+  
+	
+
+
+alert(diff([1,2,3,5], [1, 2, 3, 4, 5]));
+</script>
+
+</html>
