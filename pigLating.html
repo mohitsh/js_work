@@ -1,0 +1,38 @@
+
+
+
+<html>
+
+<script>
+	function translate(str) {
+		alist = str.split('');
+		var vowel = 'aeiou';		 
+		first = alist[0];
+		if (vowel.indexOf(first) === -1){
+			var arr = [];
+			for (var i =0; i < alist.length; i++){
+				if (alist.indexOf(vowel[i]) != -1){
+					arr.push(alist.indexOf(vowel[i]));
+				}
+
+			}
+			var min = Math.min.apply(NaN,arr);
+			while (	min > 0){
+				alist.push(alist.shift());
+				min = min -1  ;
+			}		
+			alist.push('ay');
+			return alist.join('');
+		}
+		else{
+			alist.push('way');
+			return alist.join('');
+		}
+ 		
+}a
+
+alert(translate("glove"));
+
+</script>
+
+</html>
