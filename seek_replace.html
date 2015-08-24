@@ -1,0 +1,29 @@
+
+
+<html>
+	<script>
+	function replace(str, before, after) {
+		alist = str.split(' ');
+		//alert(alist);
+		index = alist.indexOf(before);
+		//alert(index);
+		// make uper case
+		//alert(before[0].toUpperCase());
+		//alert(after[0].toUpperCase()+after.substring(1));
+		if (before[0] === before[0].toUpperCase()){
+			alist[index] = after[0].toUpperCase() + after.substring(1);
+		}
+		else{
+			alist[index] = after[0].toLowerCase() + after.substring(1);
+		}
+
+
+		//alert(alist[index]);
+		return alist.join(' ');
+	}
+
+	alert(replace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped"));
+
+	</script>
+
+</html>
