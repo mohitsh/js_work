@@ -1,0 +1,24 @@
+
+<html>
+
+	<script>
+		function fearNotLetter(str) {
+  		var first = str.charCodeAt(0);
+  		var last = str.charCodeAt(str.length-1);
+  		//alert(first);
+  		//alert(last);
+		var arr = [];
+  		for (var i = first; i <= last; i++){
+			if (str.indexOf(String.fromCharCode(i))=== -1)
+				arr.push(String.fromCharCode(i));
+		}
+		if (arr.length === 0){return undefined;}
+		else if (arr.length != 0){return arr[0];}
+		
+  		
+}
+
+alert(fearNotLetter('abcde'));
+
+	</script>
+</html>
