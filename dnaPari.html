@@ -1,0 +1,33 @@
+
+
+<html>
+	<script>
+		function pair(str) {
+			alist = str.split('');
+			arr = [];
+			for (var i = 0; i<alist.length; i++){
+				var new_arr = [];
+				//alert(alist[i]);
+				if (alist[i] === 'T'){
+					new_arr.push(alist[i],'A');
+					arr.push(new_arr);
+				}
+				else if (alist[i] === 'A'){
+					new_arr.push(alist[i],'T');
+					arr.push(new_arr);
+				}
+				else if (alist[i] === 'C'){
+					new_arr.push(alist[i],'G');
+					arr.push(new_arr);
+				}
+				else if (alist[i] === 'G'){
+					new_arr.push(alist[i],'C');
+					arr.push(new_arr);
+				}
+			}
+ 			return arr;
+				
+		}
+		alert (pair('GCG'));
+	</script>
+</html>
