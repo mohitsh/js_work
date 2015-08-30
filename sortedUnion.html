@@ -1,0 +1,28 @@
+
+<html>
+
+	<script>
+
+		function unite(arr1, arr2, arr3) {
+ 		var args = Array.prototype.slice.call(arguments, 0);
+  		var ans =  args.reduce(function(a,b){return a.concat(b);})
+		//  return args.reduce(function(a,b) {
+		//                                  if (a !== b) { 
+		//                                   return a;
+		//                                  }
+		//                                });
+  		var unique = ans.filter( onlyUnique );
+  		return unique
+		}
+		function onlyUnique(value, index, self) { 
+    		return self.indexOf(value) === index;
+		}		
+
+
+		unite([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+
+	</script>
+
+
+</html>
