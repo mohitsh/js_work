@@ -1,0 +1,25 @@
+
+
+<html>
+<p id = 'text'></p>
+
+	<script>
+		function sumPrimes(num){
+			var arr = [];
+			for (var z = 1; z <= num; z++){
+				arr.push(z);
+			}	
+			for (var i = 3; i<=num; i++){
+				for (var j = 2; j <= Math.floor(i/2); j ++){
+					if (i % j === 0){
+						arr.splice(arr.indexOf(i),1);
+						alert(arr);
+					}
+				}
+			}
+			return arr;
+		}
+		document.getElementById("text").innerHTML = sumPrimes(10);
+	</script>
+
+</html>
